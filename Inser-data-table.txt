@@ -1,0 +1,18 @@
+-------------------------------------------------------
+INSERT DATA:
+saat memasukan data kedalam table kita harus membuat tablenya terlebih dahulu,
+ketika ingin menambahkan nilai dari table tersebut kita harus menyebutkan nama kolomnya, serta perinta yg digunakan yaitu INSERT
+
+COMMAND UNTUK INSERT DATA VALUE:
+INSERT INTO nama_table (id,name,desc,bla2)
+VALUES (1, 'ia', 'dadfasfa', 'bla')
+
+cara diatas ini untuk insert value kedalam table 
+
+untuk melihat hasil value dari table produk dengan command: SELECT * FROM produk;
+
++ CARA UNTUK INSERT DATA LEBIH DARI 1 VALUES;
+INSERT INTO nama_table (id,name,desc,bla)
+VALUES (1, 'ia', 'dadfasfa', 'bla'),
+        (1, 'ia', 'dadfasfa', 'bla'),
+        (1, 'ia', 'dadfasfa', 'bla')
