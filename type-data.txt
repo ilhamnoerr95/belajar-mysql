@@ -43,3 +43,5 @@ hanya ada 2 data true & false
 
 TYPE DATA LAINNYA BISA CEK: 
 https://dev.mysql.com/doc/refman/
+
+test
