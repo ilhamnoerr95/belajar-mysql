@@ -1,0 +1,42 @@
+CREATE TABLE barang (
+    kode INT,
+    nama VARCHAR(100) NOT NULL DEFAULT 'COBA',
+    harga INT NOT NULL DEFAULT 0,
+    jumlah INT
+) ENGINE = InnoDB
+
+biasany pembuatan dari nama table atau column huruf kecil semua
+
+----------------------------------------------------------------
+3 CARA MELIHAT STRUKTUR TABLE: 
+a. DESCRIBE Nama_table
+b. DESC Nama_table
+c. show CREATE TABLE nama_Table
+
+----------------------------------------------------------------
+CARA MENGUBAH struktur TABLE yg sudah dibuat:
+
+    ALTER TABLE nama_table
+        ADD COLUMN nama_column TEXT(type data),
+        DROP COLUMN nama,
+        RENAME COLUMN nama_column TO nama_baru,
+        MODIFY nama VARCHAR(100) first,
+        MODIFY nama VARCHAR(100) AFTER jumlah,
+        
+note: ALTER BERGUNA UNTUK MENGUBAH TABLE, add digunakan untuk menambahkan column table, 
+apaila yg diubah hanya satu column maka kalian bisa langsung akhiri dengan semi colon ";" kalo masih ada yg ingin diubah tambahkan comma ",",
+drop untuk menghapus column, rename untuk mengubah nama column, modifty untuk mengubah posisi nama column
+
+----------------------------------------------------------------
+NULL: TIDAK ADA DATA, SECARA DEFAULT APABILA MEMBUAT TABLE DAN COLUMN TANPA ADA "NOT_NULL" MAKA AKAN DI SET NULL,
+
+----------------------------------------------------------------
+DEFAULT COLUMN: saat membuat table beserta column ketika kita tidak menambahkan value, column pada table itu akan di set default
+Saat kita ingin membuat column timestamp yg dimana setiap value yg akan dibuat sesuai dengan crete_atnya maka: tambahkan DEFAULT CURRENT_TIMESTAMP
+
+---------------------------------------------------------------
+TRUNCATE: MENGHAPUS SEMUA DATA DALAM TABLE 
+ex: TRUNCATE nama_Table;
+
+---------------------------------------------------------------
+MENGHAPUS TABLE : DROP TABLE nama_Table;
