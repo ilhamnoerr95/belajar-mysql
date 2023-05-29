@@ -1,0 +1,5 @@
+-------------------- command diterminal --------------------------------
++ Melihat databases di dalam mysql di terminal: show databases; wajib menggunakan titik koma
++ Cara Membuat database di terminal: create database nama_database; #nama database tidak bisa pakai spasi
++ menghapus database: drop database nama_database; #menghapus database akan menghapus keseluruhan datanya
++ memilih database: use nama_database;

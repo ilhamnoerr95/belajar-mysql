@@ -1,0 +1,45 @@
+--------------------------------------------------------------
+type data number itu ada 2 :
+1. integer => data angka bilangan bulat
+2. floating point => data angka pecahan
+
+1. integer: yg membedakan adalah kapasitas angkanya
+    a. TINYINT
+    b. SMALLINT
+    c. MEDIUMINT
+    d. integer
+    e. BIGINT
+2. FLOAT: 
+    a. FLOAT
+    b. DOUBLE 
+
+NUMBER ATTRIBUTE: TAMBAHAN TYPE DATA NUMBER
+---------------------------------------------------------------
+TYPE DATA STRING:
+maksimal tipe karakter string ini bisa ditampung dengan cara menggunakan kurung buka dan memasukan jumlah maksimal karakternya ex: CHAR(10), VARCHAR(10), VARCHAR(10)
+1. CHAR: Tipe Char ini ketika kita membuat maksimal 4 character dan saat valuenya kosong maka penyimpanan akan sesuai dengan maksimal karakternya.
+2. VARCHAR(VARIABEL KARAKTER): Menyimpan character sesuai dengan valuenya.
+
+perbedaan char & varchar adalah cara menyimpannya, MAKSIMUM DARI KEDUA TIPE INI 655635
+
+3. TEXT: sudah diberikan default maksimum karakternya
+    a. TINYTEXT: maks 255 karakter
+    b. TEXT: MAKS 65535 
+    c. MEDIUMTEXT: maks 16Mb 
+    d. LONGTEXT: maksim (4GB)
+
+4. ENUM: tipe/opsi data yg bisa membatasi inputnya 
+    contohnya: ENUM('PRIA','WANITA') => Hanya bsia menerima data "PRIA DAN WANITA"
+--------------------------------------------------------------
+TYPE DATA DATE & TIME: 
+1. DATE - YYYY-MM-DD 
+2. DATETIME - YYYY-MM-DD HH:MM:SS
+3. TIMESTAMP - YYYY-MM-DD HH:MM:SS (Apabila ingin menggunakan untuk keperluan created_at atau updated_at prefer menggunakan timestamp)
+4. TIME - HH:MM:SS
+5. YEAR - YYYY
+--------------------------------------------------------------
+TYPE DATA BOOLEAN: 
+hanya ada 2 data true & false 
+
+TYPE DATA LAINNYA BISA CEK: 
+https://dev.mysql.com/doc/refman/
