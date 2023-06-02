@@ -1,0 +1,20 @@
+#perinta update menggunakan SQL update
+berhati-hati apabila ingin update data, perhatikan WHERE CLAUSE atau argumen saat ingin udpate data
+
+command sql: 
+UPDATE produk 
+SET nama_kolom = valuenya
+WHERE id = 1;
+
+#megnahpus data table menggunakan SQL DELETE
+DELETE 
+FROM produk
+WHERE id =2;
+
+#Alias 
+berguna untuk mengubah nama kolom atau nama table ketika melakukan SELECT data,
+contoh: 
+SELECT id as 'nama_kolom',
+        name as 'nama',
+FROM produk;
+kalau 2 nama lebih dari 2 kata harus pakai quote

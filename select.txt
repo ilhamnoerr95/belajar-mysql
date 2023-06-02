@@ -1,0 +1,4 @@
+Select syntax yg dipakai untuk memilih kolom mana yg ingin diambil datanya dari sebuah table.
+apabila SELECT * artinya kita ingin mengambil data dari semua colomn, 
+apabila ingin hanya mengambil beberapa colomn saja kalian bisa ketikan nama colom yg ingin di filter datanya contoh:
+SELECT id, name, price FROM produk;

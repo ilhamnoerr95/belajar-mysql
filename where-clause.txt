@@ -1,0 +1,32 @@
+WHERE CALUSE INI BERGUNA SAAT KITA INGIN MENCARI DATA dari kolom dengan value yg ingin dicari,
+untuk penempatan WHERE CLAUSE bisa diapply setelah SELECT contoh:
+SELECT * FROM produk WHERE price = 10000;
+
+// WHERE CLAUSE INI SEPERTI ARGUMEN IF
+
+#WHERE OPREATOR 
+OPERATOR PERBANDINGAN , > , =, >=,< ,
+
+OPERATOR AND DAN OR 
+hasil opertaor AND dan OR sama kaya argumen/logic di programming
+
+#LIKE OPERATOR = MENCARI SEBAGIAN DATA DALAM STRING, KETIKA MENCARI MENGGUNAKAN INI SANGAT LAMBAT
+KARENA SCANNING DARI DATA PERTAMA DAN TIDAK DISARNKAN TIDAK MENGGUNAKAN LIKE OPERATOR
+1. mencari awalan string = LIKE 'b%'
+2. mencaari akhiran string = LIKE '%b'
+
+#NULL OPERATOR;
+untuk mencari data null atau not null, IS NULL = MENCARI DATA YG NULL , IS NOT NULL = MENCARI DATA YG TIDAK NULL
+
+#BETWEEN OPERATOR: Menyerderhanakan sql code dari operator where
+
+#in operatorMELAKUKAN PENCARIAN SEBUAH kolom dengan bberapa nilai, misalnyua ingin mencari produk dengan category makanan atau minuman
+
+#ORDER CLAUSE 
+pengurutan data berdasarkan AscendinG (ASC), Descending (DESC)
+
+#LIMIT CLAUSE
+digunakan untuk membatasi data dari sebuah table, biasanya berguna untuk pagination 
+
+#DISTINCT :
+digunakan untuk mencari atau select data berdadasarkan kolom yg datanya terduplikate akan menjadi 1 macam data saja

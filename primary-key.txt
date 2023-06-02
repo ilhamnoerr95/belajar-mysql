@@ -1,0 +1,8 @@
+PRIMARY KEY: 
+idealnya tiap tabel memiliki primary KEY
+primary key harus unik, identitas untuk tiap baris data dalam tabel, bisa kita tunjuk kolom yg akan dijadikan primary key
+
+Primary key bisa gunakan lebih dr 1 kolom,
+disarankan primary key 1 kolom saja -> untuk relasi biar ga ribet terkecuali kalo ada tabel yg relasi MANY TO MANY
+
+saat kita sudah set PRIMARY KEY pada kolom tersebut makakita tidak bisa input value dengan nilai/id yg sama
