@@ -52,7 +52,7 @@ INSERT INTO produk(id,product,category,price)
 VALUES (4, 'kacang','makanan',55000);
 
 #menghapus data table 
-DELETE FROM produk WHERE ID = 4;
+DELETE FROM produk WHERE ID = 3;
 
 #melihat semua data dari 1 table
 SELECT * FROM produk;
