@@ -54,17 +54,22 @@ order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY (id)
 )ENGINE = InnoDB;
 
+DESCRIBE orders;
+
+
 DESCRIBE orders_detail;
 SELECT * FROM produk;
 SHOW CREATE TABLE produk;
 
-CREATE TABLE orders_detail (
+CREATE TABLE orders_many (
 id_products INT NOT NULL,
 id_order INT NOT NULL,
 price INT NOT NULL,
 quantity INT NOT NULL,
-PRIMARY KEY (id_products, id_order))
-ENGINE = InnoDB;
+PRIMARY KEY (id_products, id_order),
+FOREIGN KEY(id_products) REFERENCES produk(id),
+FOREIGN KEY (id_order) REFERENCES orders(id)
+) ENGINE = InnoDB;
 
 ALTER TABLE orders_detail
 	ADD CONSTRAINT fk_orders_detail_product 
@@ -75,9 +80,26 @@ ALTER TABLE orders_detail
 		FOREIGN KEY (id_order) REFERENCES orders(id);
         
 SELECT * FROM orders;
-SELECT * FROM produk;
+SELECT * FROM products;
 SELECT * FROM orders_detail;
 
-INSERT INTO orders (total) VALUES(10000), (500000);
-INSERT INTO orders_detail (id_products,id_order,price,quantity) VALUES (5,1, 25000,1), (2,1, 25000,1);
-INSERT INTO orders_detail (id_products,id_order,price,quantity) VALUES (5,1, 15000,5), (2,2, 35000,10);
+INSERT INTO orders (total) VALUES(10000), (500000), (10000);
+
+#Kalo dapet duplicate dimana id_product & id_order gak boleh sama untuk kedua kalinya 
+INSERT INTO orders_detail 
+(id_product,id_order,price,quantity) 
+	VALUES (5,1, 25000,1), 
+			(2,1, 25000,1);
+INSERT INTO orders_detail (id_product,id_order,price,quantity) 
+		VALUES (4,1, 35000,100);
+        
+#MELIHAT DATA ORDER, DETAIL & PRODUCT
+	SELECT orders.id, products.id, products.product, orders_detail.quantity, orders_detail.price FROM orders 
+			JOIN orders_detail ON (orders_detail.id_order = orders.id)
+            JOIN products ON (products.id = orders_detail.id_product);
+            
+	SELECT orders.id, products.id, products.product, orders_detail.quantity, orders_detail.price FROM orders_detail 
+			JOIN orders ON (orders_detail.id_order = orders.id)
+            JOIN products ON (products.id = orders_detail.id_product);
+			
+
